@@ -1,37 +1,11 @@
-﻿// Laba1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// laba2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
-#include <cmath>
-#include <iomanip>
-#include <locale>
-
-using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout << setprecision(3);
-    double a, b, c, k, h, x1, x2, disc;
-    bool  fst = 0, scn = 0;
-    cout << "Введите a, b, c, k, h <<...";
-    cin >> a >> b >> c >> k >> h;
-    disc = pow(b - k, 2) - 4 * a * (c-h);
-    if (disc > 0) {
-        x1 = (-(b - k) - sqrt(disc)) / (2 * a);
-        x2 = (-(b - k) + sqrt(disc)) / (2 * a);
-        fst = 1; scn = 1;
-    }
-    else if (disc == 0) {
-        x1 = -(b - k) / (2 * a);
-        fst = 1;
-    }
-    if (fst == 0) cout << "NO INTERSECTS!" << endl; else {
-        cout << "x1\ty1" << endl << x1 << "\t" << k * x1 + h << endl;
-        if (scn) cout << "x2\ty2" << endl << x2 << "\t" << k * x2 + h << endl;
-    }
-    system("pause");
-    return 0;
+    std::cout << "Hello World!\n";
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
